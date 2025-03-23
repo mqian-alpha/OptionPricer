@@ -6,17 +6,17 @@
 using namespace std;
 
 OptionContract::OptionContract(double K, double T, bool isCall) {
-    this->m_K = K;
-    this->m_T = T > SMALL_T ? T : SMALL_T;
-    this->m_isCall = isCall;
+    m_K = K;
+    m_T = T > SMALL_T ? T : SMALL_T;
+    m_isCall = isCall;
 }
 
 OptionSecurity::OptionSecurity(double S0, double sigma, double r, double q, const OptionContract& contract) {
-    this->m_S0 = S0;
-    this->m_r = r;
-    this->m_sigma = (sigma > SMALL_SIGMA) ? sigma : SMALL_SIGMA;
-    this->m_q = q;
-    this->m_contract = contract;
+    m_S0 = S0;
+    m_r = r;
+    m_sigma = (sigma > SMALL_SIGMA) ? sigma : SMALL_SIGMA;
+    m_q = q;
+    m_contract = contract;
 }   
 
 // Implement the member functions

@@ -4,9 +4,7 @@
 #define SMALL_T 1e-6
 
 // Normal distribution function
-double N(double x) {
-    return 0.5 * erfc(-x / sqrt(2));
-}
+double N(double x); // Declare the normal distribution function
 
 // Option contract class
 class OptionContract {

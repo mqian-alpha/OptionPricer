@@ -145,9 +145,13 @@ double OptionSecurity::impliedVol(double targetPrice) const {
 
 // Test the OptionPrice class
 int main() {
-    double S0 = 100.0, K = 100.0, r = 0.05, T = 1.0, sigma = 0.15, q = 0.0;
+    // Create an option contract object
+    double K = 100.0, T = 1.0;
     bool isCall = true;
     OptionContract contract(K, T, isCall);
+
+    // Create an option security object with market data
+    double S0 = 100.0, r = 0.05, sigma = 0.15, q = 0.0;
     OptionSecurity option(S0, sigma, r, q, contract);
     double price = option.price();
     double delta = option.delta();

@@ -12,7 +12,7 @@ int main() {
     OptionContract contract(K, T, isCall);
 
     // Create an option security object with market data
-    double S0 = 100.0, r = 0.05, sigma = 0.15, q = 0.0;
+    double S0 = 100.0, r = 0.05, sigma = 0.25, q = 0.0;
     OptionSecurity option(S0, sigma, r, q, contract);
     double price = option.price();
     double delta = option.delta();
